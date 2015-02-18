@@ -32,7 +32,7 @@ button {
 }
 </style>
 </head>
-<body onload="onLoad()" onsize="onSize()">
+<body onload="show()" onsize="onSize()">
 <p id="demo1"></p>
 
 <script>
@@ -86,10 +86,15 @@ button {
   function show(){
      AdMob.setOptions( defaultOptions );
      AdMob.createBanner( admobid.banner );
+	 
+	 
+	 
 }
 </script>
 
 <script>
+funtion showauto()
+{
 document.addEventListener('onBannerReceive',function(data){
     AdMob.showBanner();
 });
@@ -97,7 +102,8 @@ AdMob.createBanner({
     adId: admobid.banner,
     autoShow: true
 });
-AdMob.setOptions( defaultOptions );
+
+}
 </script>
 
 </body>
