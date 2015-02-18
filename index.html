@@ -36,7 +36,7 @@ button {
 <script>
     function onLoad() {
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-            document.addEventListener('deviceready', initApp, true);
+            document.addEventListener('deviceready', initApp, false);
         } else {
             initApp();
         }
@@ -88,13 +88,23 @@ button {
 <h3>
 <p>let it shows ads in top of the screen.</p>
 </h3>
+
 	<script>
 	
 	
 	if(AdMob) AdMob.createBanner( {
     adId: admobid.banner, 
     position: AdMob.AD_POSITION.TOP_CENTER, 
-    autoShow: true } );
+    autoShow: true }
+	
+	if(AdMob) AdMob.showBanner ({
+	
+	initApp();
+	position: AdMob.AD_POSITION.TOP_CENTER, 
+    autoShow: true 
+	
+	})
+	);
 	
 	</script>
 	
