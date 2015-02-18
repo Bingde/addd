@@ -83,11 +83,13 @@ button {
     isTesting: false,
     autoShow: true
 };
-AdMob.setOptions( defaultOptions );
-AdMob.createBanner( admobid.banner );
-
+  function show(){
+     AdMob.setOptions( defaultOptions );
+     AdMob.createBanner( admobid.banner );
+}
 </script>
-
+<button onclick="show();">create</button>
+		<br />
 
 </body>
 </html>
