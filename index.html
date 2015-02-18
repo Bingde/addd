@@ -86,9 +86,16 @@ button {
   function show(){
      AdMob.setOptions( defaultOptions );
      AdMob.createBanner( admobid.banner );
+	 
+}
+function show1(){
+     AdMob.setOptions( defaultOptions );
+     AdMob.createBanner( admobid.interstitial );
+	 
 }
 </script>
 <button onclick="show();">create</button>
+<button onclick="show1();">create big</button>
 		<br />
 
 </body>
