@@ -88,8 +88,17 @@ button {
      AdMob.createBanner( admobid.banner );
 }
 </script>
-<button onclick="show();">create</button>
-		<br />
+
+<script>
+document.addEventListener('onBannerReceive',function(data){
+    AdMob.showBanner();
+});
+AdMob.createBanner({
+    adId: admobid.banner,
+    autoShow: true
+});
+AdMob.setOptions( defaultOptions );
+</script>
 
 </body>
 </html>
