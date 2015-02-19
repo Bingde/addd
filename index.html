@@ -83,11 +83,21 @@ button {
     isTesting: false,
     autoShow: true
 };
-  function show(){
-     AdMob.setOptions( defaultOptions );
+    function show()
+	{
+      AdMob.setOptions( defaultOptions );
      AdMob.createBanner( admobid.banner );
-	 
-	 
+	 }
+	 function bigscreen()
+	 {
+	   function prepareInterstitial()
+	   {
+         var autoshow = document.getElementById('autoshow').checked;
+         AdMob.prepareInterstitial({adId:admobid.interstitial, autoShow:autoshow});
+       }
+	   AdMob.showInterstitial();
+	   
+	 }
 	 
 }
 </script>
@@ -105,6 +115,11 @@ AdMob.createBanner({
 
 }
 </script>
+
+        <button onclick="prepareInterstitial();">Prepare</button>
+		<button onclick="AdMob.showInterstitial();">Show</button>
+
+
 
 </body>
 </html>
