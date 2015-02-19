@@ -32,7 +32,7 @@ button {
 }
 </style>
 </head>
-<body onload="show()" onsize="onSize()">
+<body onload="onLoad()" onsize="onSize()">
 <p id="demo1"></p>
 
 <script>
@@ -47,6 +47,7 @@ button {
             initApp();
         }
     }
+
   var admobid = {};
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
@@ -64,6 +65,7 @@ button {
             interstitial: 'ca-app-pub-xxx/kkk'
         };
     }
+	
 	  function initApp() {
 		if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
 		initAd();
@@ -73,26 +75,21 @@ button {
     bannerId: admobid.banner,
     interstitialId: admobid.interstitial,
     adSize: 'SMART_BANNER',
-    width: 180, // valid when set adSize 'CUSTOM'
-    height: 30, // valid when set adSize 'CUSTOM'
+    width: 360, // valid when set adSize 'CUSTOM'
+    height: 90, // valid when set adSize 'CUSTOM'
     position: AdMob.AD_POSITION.BOTTOM_CENTER,
     x: 0,       // valid when set position to POS_XY
     y: 0,       // valid when set position to POS_XY
     isTesting: false,
     autoShow: true
 };
-    function show()
-	{
-      AdMob.setOptions( defaultOptions );
-      AdMob.createBanner( admobid.banner );
-	 }
- 
+  function show(){
+     AdMob.setOptions( defaultOptions );
+     AdMob.createBanner( admobid.banner );
 }
 </script>
+button onclick="show();">create</button>
+		<br />
 
-
-
-        
-		
 </body>
 </html>
