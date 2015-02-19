@@ -47,7 +47,6 @@ button {
             initApp();
         }
     }
-
   var admobid = {};
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
@@ -65,7 +64,6 @@ button {
             interstitial: 'ca-app-pub-xxx/kkk'
         };
     }
-	
 	  function initApp() {
 		if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
 		initAd();
@@ -86,26 +84,13 @@ button {
     function show()
 	{
       AdMob.setOptions( defaultOptions );
-     AdMob.createBanner( admobid.banner );
+      AdMob.createBanner( admobid.banner );
 	 }
-	
-	 
+ 
 }
 </script>
 
-<script>
-funtion showauto()
-{
-document.addEventListener('onBannerReceive',function(data){
-    AdMob.showBanner();
-});
-AdMob.createBanner({
-    adId: admobid.banner,
-    autoShow: true
-});
 
-}
-</script>
 
         
 		
