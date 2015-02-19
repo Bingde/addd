@@ -32,7 +32,7 @@ button {
 }
 </style>
 </head>
-<body onload="onLoad()" onsize="onSize()">
+<body onload="show()" onsize="onSize()">
 <p id="demo1"></p>
 
 <script>
@@ -76,7 +76,7 @@ button {
     interstitialId: admobid.interstitial,
     adSize: 'SMART_BANNER',
     width: 360, // valid when set adSize 'CUSTOM'
-    height: 30, // valid when set adSize 'CUSTOM'
+    height: 70, // valid when set adSize 'CUSTOM'
     position: AdMob.AD_POSITION.BOTTOM_CENTER,
     x: 0,       // valid when set position to POS_XY
     y: 0,       // valid when set position to POS_XY
@@ -88,7 +88,7 @@ button {
      AdMob.createBanner( admobid.banner );
 }
 </script>
-<button onclick="show();">create</button>
+
 	
 
 </body>
