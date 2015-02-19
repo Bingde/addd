@@ -32,7 +32,7 @@ button {
 }
 </style>
 </head>
-<body onload="show()" onsize="onSize()">
+<body onload="onLoad()" onsize="onSize()">
 <p id="demo1"></p>
 
 <script>
@@ -42,6 +42,13 @@ button {
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
             document.addEventListener('deviceready', initApp, false);
 			document.getElementById("demo1").innerHTML = localtime;
+			
+			function show(){
+     AdMob.setOptions( defaultOptions );
+     AdMob.createBanner( admobid.banner );
+}
+			
+			
 			
         } else {
             initApp();
@@ -83,10 +90,7 @@ button {
     isTesting: false,
     autoShow: true
 };
-  function show(){
-     AdMob.setOptions( defaultOptions );
-     AdMob.createBanner( admobid.banner );
-}
+  
 </script>
 
 	
