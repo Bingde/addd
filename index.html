@@ -32,30 +32,23 @@ button {
 }
 </style>
 </head>
-<body onload="onLoad()" onsize="onSize()">
+<body onload="Show()" onsize="onSize()">
 <p id="demo1"></p>
 
 <script>
-
    function onLoad() {
         var localtime=new Date();
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
             document.addEventListener('deviceready', initApp, false);
 			document.getElementById("demo1").innerHTML = localtime;
-			
-			
+				
 			
         } else {
             initApp();
         }
 		
-			function show(){
-     AdMob.setOptions( defaultOptions );
-     AdMob.createBanner( admobid.banner );
-}
-			
-    }
-
+   }
+		
   var admobid = {};
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
@@ -90,8 +83,11 @@ button {
     y: 0,       // valid when set position to POS_XY
     isTesting: false,
     autoShow: true
+	}
+  function Show(){
+     AdMob.setOptions( defaultOptions );
+     AdMob.createBanner( admobid.banner );
 };
-  
 </script>
 
 	
