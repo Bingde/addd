@@ -32,7 +32,7 @@ button {
 }
 </style>
 </head>
-<body onload="Show()">
+<body onload="onLoad()">
 <p id="demo1"></p>
 
 <script>
@@ -41,14 +41,13 @@ button {
         if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
             document.addEventListener('deviceready', initApp, false);
 			document.getElementById("demo1").innerHTML = localtime;
-				
-			
+
         } else {
             initApp();
         }
 		
    }
-		
+	
   var admobid = {};
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
@@ -88,9 +87,17 @@ button {
      AdMob.setOptions( defaultOptions );
      AdMob.createBanner( admobid.banner );
 };
+    function Showbig(){
+   AdMob.prepareInterstitial({
+    adId: admobid.interstitial,
+    autoShow: true
+});}
+
 </script>
 
-	
+<button onclick="Show();">createsmall</button>
+<p> i love you yaya</p>
+<button onclick="Showbig();">createbig</button>
 
 </body>
 </html>
