@@ -88,16 +88,7 @@ button {
       AdMob.setOptions( defaultOptions );
      AdMob.createBanner( admobid.banner );
 	 }
-	 function bigScreen()
-	 {
-	   function prepareInterstitial()
-	   {
-         var autoshow = document.getElementById('autoshow').checked;
-         AdMob.prepareInterstitial({adId:admobid.interstitial, autoShow:autoshow});
-       }
-	   AdMob.showInterstitial();
-	   
-	 }
+	
 	 
 }
 </script>
@@ -116,10 +107,7 @@ AdMob.createBanner({
 }
 </script>
 
-        <button onclick="bigScreen();">Prepare</button>
+        
 		
-
-
-
 </body>
 </html>
