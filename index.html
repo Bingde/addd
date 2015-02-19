@@ -43,16 +43,17 @@ button {
             document.addEventListener('deviceready', initApp, false);
 			document.getElementById("demo1").innerHTML = localtime;
 			
-			function show(){
-     AdMob.setOptions( defaultOptions );
-     AdMob.createBanner( admobid.banner );
-}
-			
 			
 			
         } else {
             initApp();
         }
+		
+			function show(){
+     AdMob.setOptions( defaultOptions );
+     AdMob.createBanner( admobid.banner );
+}
+			
     }
 
   var admobid = {};
